@@ -1,4 +1,4 @@
-<?php include "_common/header.php" ?>
+<?php include("_common/header.php") ?>
 
 
 <main class="container">
@@ -6,14 +6,14 @@
         <div class="page-header">
             <h1>To Do app</h1>
         </div>
-
+        
         <ul class="list-group col-sm-6">
             <li class="list-group-item">do this pls</li>
             <li class="list-group-item">also do this stuff asap</li>
         </ul>
 
         
-        <form class="col-sm-6" action="add-new.php">
+        <form class="col-sm-6" action="_inc/add-new.php" method="post">
             <p class="form-group">
                 <textarea class="form-control" name="message" id="text" cols="10" rows="3" placeholder="add new to-do thing"></textarea>
             </p>
@@ -25,4 +25,4 @@
     </div> 
 </main>
 
-<?php include "_common/footer.php" ?>
+<?php include("_common/footer.php") ?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 //show all errors
 ini_set("display_startup_errors", "On");
@@ -6,7 +6,7 @@ ini_set("display_errors", "On");
 error_reporting(-1);
 
 // Require Composer's autoloader.
-require_once("vendor/autoload.php");
+require("vendor/autoload.php");
 
 // Using Medoo namespace.
 use Medoo\Medoo;
@@ -20,8 +20,9 @@ $database = new Medoo([
     'password' => ''
 ]);
 
-echo "<pre>";
-print_r( $database->info() );
-echo "</pre>";
+//initialize Whoops package for error display
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
 
 ?>

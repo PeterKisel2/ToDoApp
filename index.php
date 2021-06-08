@@ -7,15 +7,20 @@
             <h1>To Do app</h1>
         </div>
         
+        <?php $data = $database->select("items", "text"); ?>
+
         <ul class="list-group col-sm-6">
-            <li class="list-group-item">do this pls</li>
-            <li class="list-group-item">also do this stuff asap</li>
+            <?php 
+                foreach ( $data as $item) {
+                    echo '<li class="list-group-item">' . $item . '</li>';
+                };
+            ?>
         </ul>
 
         
-        <form class="col-sm-6" action="_inc/add-new.php" method="post">
+        <form id="add-form" class="col-sm-6" action="_inc/add-item.php" method="post">
             <p class="form-group">
-                <textarea class="form-control" name="message" id="text" cols="10" rows="3" placeholder="add new to-do thing"></textarea>
+                <textarea id="text" class="form-control" name="message" cols="10" rows="3" placeholder="add new to-do thing"></textarea>
             </p>
 
             <p class="form-group">

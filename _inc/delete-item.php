@@ -3,9 +3,8 @@
     //include
     require('config.php');
 
-    //update items in DB
-    $affected = $database->update('items', 
-    [ 'text' => $_POST["message"] ],
+    //delete items in DB
+    $affected = $database->delete('items', 
     [ 'id' => $_POST["id"] ]
     );
 

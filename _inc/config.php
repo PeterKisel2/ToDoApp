@@ -8,6 +8,9 @@ error_reporting(-1);
 // Require Composer's autoloader.
 require("vendor/autoload.php");
 
+//Global variables
+$base_url = 'http://localhost/webrebel2/ToDoApp/master';
+
 // Using Medoo namespace.
 use Medoo\Medoo;
  

@@ -9,8 +9,7 @@
     );
 
     if ( $affected ) {
-        header("Location: $base_url/index.php");
-        die();
+        redirect('/');
     };
 
 ?>

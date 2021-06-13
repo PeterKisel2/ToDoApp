@@ -1,14 +1,30 @@
-.controls {
-    margin-left: 15px;
+.controls a {
+  margin-left: 10px;
 }
 
+.done-link:hover {
+  color: #00efb2;
+}
+
+.delete-link {
+  color: darkred;
+}
+
+.delete-link:hover {
+  color: #be0000;
+}
+
+.edit-link {
+  color: darkgoldenrod;
+}
+
+.edit-link:hover {
+  color: #e8a90e;
+}
+
+.done {
+  text-decoration: line-through !important;
+  color: #5d5d5d !important;
+}
 
 /*# sourceMappingURL=main.css.map */
-
-/* .list-group-item .controls {
-    display: none!important;
-}
-
-.list-group-item:hover .controls {
-    display: flex!important;
-} */

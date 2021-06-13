@@ -2,15 +2,11 @@
 
     include_once("_common/header.php"); 
 
-    $item = $database->get("items", "text", [
-        'id' => $_GET['id']
-    ]);
-
-    if ( ! $item ) {
-        header("HTTP/1.0 404 Not Found");
-        include_once("404.php");
-        die();
+    $item = get_item();
+    if ( !$item ) {
+        show_404();
     }
+
 ?>
 
 

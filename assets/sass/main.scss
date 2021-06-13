@@ -1,0 +1,28 @@
+.controls a {
+    margin-left: 10px;
+}
+
+.done-link:hover {
+    color: lighten($color: #00bc8c, $amount: 10);
+}
+
+.delete-link {
+    color: darkred;
+}
+
+.delete-link:hover {
+    color: lighten($color: darkred, $amount: 10);
+}
+
+.edit-link {
+    color: darkgoldenrod;
+}
+
+.edit-link:hover {
+    color: lighten($color: darkgoldenrod, $amount: 10);
+}
+
+.done {
+    text-decoration: line-through!important;
+    color: #5d5d5d!important;
+}

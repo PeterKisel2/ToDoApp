@@ -8,20 +8,14 @@ error_reporting(-1);
 // Require Composer's autoloader.
 require("vendor/autoload.php");
 
-//Global variables
-$base_url = 'http://localhost/webrebel2/ToDoApp/master';
+// Variables
+require("variables.php");
 
-// Using Medoo namespace.
-use Medoo\Medoo;
- 
-// Connect the database.
-$database = new Medoo([
-    'type' => 'mysql',
-    'host' => 'localhost',
-    'database' => 'todo',
-    'username' => 'root',
-    'password' => ''
-]);
+//Database - Medoo
+require("database.php");
+
+//Functions
+require("functions.php");
 
 //initialize Whoops package for error display
 $whoops = new \Whoops\Run;
